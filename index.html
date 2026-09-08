@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%98%85%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="hero.css" />
 </head>
 <body>
   <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
@@ -21,7 +22,7 @@
       <span class="brand-mark">★</span>
       <span class="brand-text">
         <strong>Anime Stars</strong>
-        <em>Reviews &amp; briefings</em>
+        <em>Reviews & briefings</em>
       </span>
     </a>
     <nav>
@@ -59,13 +60,10 @@
         Add a name. We pull official catalog facts — episodes, studio, genres, synopsis —
         then generate a 1–5 star Anime Stars review you can keep in your library.
       </p>
-
       <form id="search-form" class="search-bar" autocomplete="off">
         <label class="sr-only" for="anime-query">Anime title</label>
         <input id="anime-query" name="q" type="search" placeholder="Try Frieren, Mob Psycho 100, Steins;Gate…" required />
-        <button type="submit" id="search-btn">
-          <span>Generate</span>
-        </button>
+        <button type="submit" id="search-btn"><span>Generate</span></button>
       </form>
       <p class="hint" id="status-line">Powered by MyAnimeList data via Jikan. Editorial copy is generated in your browser.</p>
     </section>
@@ -104,18 +102,9 @@
         <h2>How a briefing is built</h2>
       </div>
       <ol class="steps">
-        <li>
-          <strong>You add the name</strong>
-          <span>Search is fuzzy — “aot”, “demon slayer”, or a Japanese title all work.</span>
-        </li>
-        <li>
-          <strong>Catalog facts load</strong>
-          <span>Episode count, airing status, studio, genres, score, and official synopsis come from MyAnimeList.</span>
-        </li>
-        <li>
-          <strong>Stars write the review</strong>
-          <span>A 1–5 star rating and editorial summary are generated from those facts — who it’s for, time commitment, and a verdict.</span>
-        </li>
+        <li><strong>You add the name</strong><span>Search is fuzzy — nicknames and romaji work.</span></li>
+        <li><strong>Catalog facts load</strong><span>Episode count, status, studio, genres, score, and synopsis come from MyAnimeList.</span></li>
+        <li><strong>Stars write the review</strong><span>A 1–5 star rating and editorial are generated from those facts.</span></li>
       </ol>
     </section>
   </main>
@@ -126,5 +115,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="hero-slider.js"></script>
 </body>
 </html>
