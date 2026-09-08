@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Anime Stars — Reviews & Briefings</title>
   <meta name="description" content="Search any anime. Anime Stars builds a 1–5 star briefing with synopsis, episode count, studio, and an AI editorial." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +29,27 @@
       <a href="#how">How it works</a>
     </nav>
   </header>
+
+  <section class="hero-slider" id="hero-slider" aria-roledescription="carousel" aria-label="Trending anime">
+    <div class="hero-slides" id="hero-slides"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="hero-kicker">Trending now</p>
+      <h2 class="hero-title" id="hero-title">Loading titles…</h2>
+      <p class="hero-meta" id="hero-meta"></p>
+      <p class="hero-blurb" id="hero-blurb"></p>
+      <div class="hero-actions">
+        <button type="button" class="hero-open" id="hero-open">Open briefing</button>
+        <button type="button" class="hero-toggle" id="hero-toggle" aria-pressed="false" aria-label="Pause slider">
+          <span class="icon-pause" aria-hidden="true"></span>
+          <span class="icon-play" aria-hidden="true"></span>
+          <span class="toggle-label">Pause</span>
+        </button>
+      </div>
+    </div>
+    <div class="hero-progress" aria-hidden="true"><i id="hero-progress-bar"></i></div>
+    <div class="hero-thumbs" id="hero-thumbs" role="tablist" aria-label="Choose a trending title"></div>
+  </section>
 
   <main>
     <section class="hero">
